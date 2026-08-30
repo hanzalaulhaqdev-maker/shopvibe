@@ -1,0 +1,167 @@
+/* Cart Page Styles */
+.cart-table {
+    width: 100%;
+}
+
+.cart-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+    border-bottom: 2px solid var(--border);
+    text-align: left;
+}
+
+.cart-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.cart-product-img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    background: var(--secondary);
+}
+
+.cart-product-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cart-product-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    width: fit-content;
+}
+
+.qty-control button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-control input {
+    width: 40px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    /* Standard property */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+/* Remove spinner buttons in all browsers */
+.qty-control input::-webkit-outer-spin-button,
+.qty-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.qty-control input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.remove-btn {
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-summary-card {
+    background: var(--secondary);
+    padding: 1.5rem;
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-summary-row.total {
+    border-bottom: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.coupon-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.coupon-section input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.coupon-section button {
+    padding: 0.6rem 1.2rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.empty-cart i {
+    font-size: 4rem;
+    color: var(--border);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .cart-table thead { display: none; }
+    .cart-table tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
+        padding: 1rem;
+    }
+    .cart-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        border: none;
+    }
+    .cart-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+}
